@@ -6,7 +6,7 @@ game:GetService("Players").LocalPlayer.Idled:connect(function()
 end)
 hives = game.Workspace.Honeycombs:GetChildren() for i = #hives, 1, -1 do  v = game.Workspace.Honeycombs:GetChildren()[i] if v.Owner.Value == nil then game.ReplicatedStorage.Events.ClaimHive:FireServer(v.HiveID.Value) end end
 OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "KhaiBeo Hub", HidePremium = false, SaveConfig = true, ConfigFolder = "89 Hub", IntroEnabled = true, IntroText = "Khaibeo hub",IntroIcon = "rbxassetid://10472045394", Icon = "rbxassetid://10472045394" })
+local Window = OrionLib:MakeWindow({Name = "khaibeo hub", HidePremium = false, SaveConfig = true, ConfigFolder = "khaibeo hub", IntroEnabled = true, IntroText = "khaibeo hub",IntroIcon = "rbxassetid://10472045394", Icon = "rbxassetid://10472045394" })
 local Main = Window:MakeTab({
 	Name = "Main",
 	Icon = "",
@@ -18,8 +18,13 @@ for _,v in next, game.workspace.Collectibles:GetChildren() do
         v:Destroy()
     end
 end 
+local Beemas = Window:MakeTab({
+	Name = "Beemas",
+	Icon = "",
+	PremiumOnly = false
+})
 local Dispenser = Window:MakeTab({
-	Name = "Dispenper",
+	Name = "dispenser",
 	Icon = "",
 	PremiumOnly = false
 })
@@ -1408,6 +1413,10 @@ Visuanal:AddToggle({
         game.Players.LocalPlayer.UserId,
         true
     )
+    Beemas:AddButton({
+        Name = "Auto collect snowflake",
+        Callback = function()
+            loadstring(game:HttpGet("https://github.com/HoangAnhKun/Bss/raw/main/AutoSnowV5.txt"))()
 end, game.Players.LocalPlayer.PlayerScripts.ClientInit)
     end
     end})
