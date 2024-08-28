@@ -1420,6 +1420,8 @@ end, game.Players.LocalPlayer.PlayerScripts.ClientInit)
         Name = "Auto collect snowflake",
         Callback = function()
             loadstring(game:HttpGet("https://github.com/HoangAnhKun/Bss/raw/main/AutoSnowV5.txt"))()
+game.Players.LocalPlayer.UserId,
+        true
+    )
 end, game.Players.LocalPlayer.PlayerScripts.ClientInit)
     end
-    end})
