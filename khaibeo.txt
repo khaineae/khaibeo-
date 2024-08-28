@@ -1413,6 +1413,9 @@ Visuanal:AddToggle({
         game.Players.LocalPlayer.UserId,
         true
     )
+end, game.Players.LocalPlayer.PlayerScripts.ClientInit)
+    end
+    end})
     Beemas:AddButton({
         Name = "Auto collect snowflake",
         Callback = function()
